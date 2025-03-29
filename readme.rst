@@ -25,22 +25,6 @@ Changelog and New Features
 You can find a list of all changes for each release in the `user
 guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
 
-*******************
-Server Requirements
-*******************
-
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/userguide3/installation/index.html>`_
-of the CodeIgniter User Guide.
 
 *******
 License
@@ -69,3 +53,35 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+
+Loan_mgmt_ci3
+This is mini project for loan Management
+
+Loan Management System
+
+
+*******************
+Server Requirements
+*******************
+
+***************
+Requirements
+***************
+
+PHP 7.4+
+MySQL 5.7+
+CodeIgniter 3.1.13
+Installation
+Clone repository
+Import loan_mgmt.sql
+Configure application/config/database.php
+Set base URL in config.php
+Run application:
+php -S localhost:8000
+
+***************
+Default Admin
+***************
+
+Username: admin Password: admin123
