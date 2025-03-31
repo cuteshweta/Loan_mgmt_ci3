@@ -61,33 +61,23 @@ $route['customer/apply-loan'] = 'customer/apply_loan';
 $route['customer/repayments'] = 'customer/repayments';
 $route['customer/make-payment'] = 'customer/make_payment';
 
+
 // Admin Routes
 $route['admin/dashboard'] = 'admin/dashboard';
 $route['admin/dashboard/(:status)'] = 'admin/dashboard/$status';
-$route['admin/loans'] = 'admin/loans';
 $route['admin/loans/(:num)'] = 'admin/loan_detail/$1';
-// $route['admin/loans/update-status'] = 'admin/update_loan_status';
-
-// API Routes (if needed)
-$route['api/check-username'] = 'auth/check_username_availability';
+$route['admin/loans/update-status'] = 'admin/update_loan_status';
 
 // Default Routes
 $route['default_controller'] = 'auth';
 $route['404_override'] = 'errors/page_not_found';
 $route['translate_uri_dashes'] = FALSE;
 
-// Custom Routing for Security (Optional)
 $route['customer/(:any)'] = function ($method) {
-    // if (!is_logged_in() || is_admin()) {
-    //     redirect('auth/login');
-    // }
     return 'customer/'.$method;
 };
 
 $route['admin/(:any)'] = function ($method) {
-    // if (!is_logged_in() || !is_admin()) {
-    //     redirect('auth/login');
-    // }
     return 'admin/'.$method;
 };
 

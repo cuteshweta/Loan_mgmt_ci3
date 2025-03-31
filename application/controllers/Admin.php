@@ -23,14 +23,14 @@ class Admin extends CI_Controller {
 
     public function __construct() {
         parent::__construct();
-       
+        $this->load->helper('auth');
         if(!is_logged_in() || !is_admin()) redirect('auth/login');
         // Load dependencies
         $this->load =& get_instance()->load;
         $this->session =& get_instance()->session;
         $this->form_validation =& get_instance()->form_validation;
         $this->db =& get_instance()->db;
-        $this->load->helper('auth');
+       
         $this->load->database();
         $this->load->library('session');
         $this->load->library('form_validation');
